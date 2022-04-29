@@ -47,13 +47,13 @@ class Card:
 
     def player_answer_class(self):
         while True:
-            self.answer = int(input('ваш выбор 1 - ДА | 2 - НЕТ -> '))
-            if self.answer == 1 or self.answer == 2:
+            self.answer = input('ваш выбор y - ДА | n - НЕТ -> ')
+            if self.answer == 'y' or self.answer == 'n':
                 break
             else:
-                print('введите правильное число')
+                print('сделайте правильный выбор')
         return self.answer
 
     def robot_answer_class(self):
-            self.robot_answer = print('ваш выбор 1 - ДА | 2 - НЕТ -> ')
+            self.robot_answer = print('ваш выбор y - ДА | n - НЕТ -> ')
             return self.robot_answer
