@@ -1,6 +1,6 @@
 import random
 barrels_list = []
-for digits_count in range(1, 92, 1):
+for digits_count in range(1, 91, 1):
     barrels_list.append(digits_count)
 
 

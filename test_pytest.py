@@ -24,6 +24,15 @@ class TestCard:
         Card.robot_answer_class = 'ваш выбор y - ДА | n - НЕТ -> '
         assert Card.robot_answer_class == 'ваш выбор y - ДА | n - НЕТ -> '
 
+    def test_card_magic(self):
+        card1 = Card()
+        card2 = Card()
+        card1.card_generation_class()
+        card2.card_generation_class()
+        assert len(card1) == len(card2)
+
+
+
 
 def test_barrel():
     digit = barrel_generation()

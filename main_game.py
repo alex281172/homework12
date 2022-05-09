@@ -24,7 +24,8 @@ def main_game(quantity_players):
     for count_card in range(quantity_players):
         player.append(count_card)
         player[count_card] = Card()
-        player[count_card].card_generation_class()
+        player[count_card].card_generation_class(15)
+
     # выводим список игроков
     print('*' * 50)
     print('              Начинаем ИГРУ ЛОТО')
@@ -32,6 +33,8 @@ def main_game(quantity_players):
     for count_players in range(quantity_players):
         print(f'{count_players + 1}. \033[91m\033[1m{checklist[count_players]}\033[0;0m')
     print('*' * 50)
+
+
 
     #пошаговая игра
     step = 1
@@ -87,6 +90,7 @@ def main_game(quantity_players):
                     print(f'\033[91m\033[1mСтоп игра! {checklist[count]}, Вы проиграли! Такого числа нет!\033[0;0m')
                     print('*' * 50)
                     printing_space(1)
+
                     looser.append(count)
                     looser_count += 1
 
